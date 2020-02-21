@@ -1,0 +1,20 @@
+@model PartyHome.Models.Evento
+<h2>Evento</h2>
+
+<form class="form-horizontal" asp-controller="Evento" asp-action="Salvar" method="POST">
+    <input type="hidden" asp-for="Id">
+    <p><input type="text" class="form-control" asp-for="Event" placeholder="Nome do Entreterimento" style="border:2px solid Black;"></p>
+    <p><input type="number" class="form-control" asp-for="Capacidade" placeholder="Capacidade de pessoas" style="border:2px solid Black;"></p>
+    <p><input type="number" class="form-control" asp-for="QtdIngressos" placeholder="Quantidade de ingressos" style="border:2px solid Black;"></p>
+    <p><input type="text" class="form-control" asp-for="Data" placeholder="Data do evento" style="border:2px solid Black;"></p>
+    <p><input type="number" class="form-control" asp-for="Custo" placeholder="Valor do ingresso" style="border:2px solid Black;"></p>
+    <p><input type="text" class="form-control" asp-for="Local" placeholder="Local do Evento" style="border:2px solid Black;"></p>
+    <p><select class="form-control " asp-for="Genero" style="border:2px solid Black;">
+         <option value="Eletronica">Eletronica</option>
+            <option value="Rock">Rock</option>
+            <option value="Sertanejo">Sertanejo</option>
+            <option value="Pop">Pop</option>
+    </select></p>
+
+    <p><button class="btn btn- success"><h1 style="border:2px solid Black;background-color:#ffd600;color: Black ">-Cadastrar-</h1></button></p>
+</form>

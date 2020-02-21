@@ -1,0 +1,9 @@
+@model PartyHome.Models.CasaDeShow
+<h2>Cadatro de Show</h2>
+
+<form class="form-horizontal" asp-controller="CasaDeShow" asp-action="Salvar" method="POST">
+    <input type="hidden" asp-for="Id">
+    <p><input type="text" class="form-control" asp-for="Nome" placeholder="Casa de Show" style="border:2px solid Black;"></p>
+    <input type="text" class="form-control" asp-for="Endereco" placeholder="Endereço" style="border:2px solid Black;">
+    <button class="btn btn- success"><h1 style="border:2px solid Black;background-color:#ffd600;color: Black ">-Cadastrar-</h1></button>
+</form>

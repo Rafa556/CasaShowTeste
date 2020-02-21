@@ -1,0 +1,26 @@
+@model IEnumerable<PartyHome.Models.CasaDeShow>
+
+<div class="row" >
+    <div>
+<p><h2 class="mr-5" style="font-size:500%;color:#ffd600">Todas as Casas de Show </h2></p>
+</div>
+<div>
+<p><h3><img width="200" src="~/Gifs/giphy.gif"></h3></p>
+</div>
+</div>
+    <style>
+         body {background-color: #9c9c9c;}
+    </style>
+
+
+<a href="/CasaDeShow/Cadastrar" class="bte bte-success" style="font-size:30px;border:2px solid Black;background-color:#ffd600;color: Black ">-Nova Casa de Show-</a>
+
+@foreach(var casadeshow in Model){
+
+    <p><b><h4><a style="font-size:30px;color:#ffd600">Casa de Show: </a>@casadeshow.Nome</h4></b></p>
+    <p><b><h4><a style="font-size:30px;color:#ffd600">Endereço: </a>@casadeshow.Endereco</h4></b></p>
+    <a href="/CasaDeShow/Editar/@casadeshow.Id" class="bte bte-success" style="font-size:30px;border:2px solid Black;background-color:#0000b6;color: White ">-Editar-</a>
+    <a href="/CasaDeShow/Deletar/@casadeshow.Id" class="bte bte-danger" style="font-size:30px;border:2px solid Black;background-color:#c90000;color: White ">-Apagar-</a>
+    <hr>
+
+}

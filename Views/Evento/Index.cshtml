@@ -1,0 +1,36 @@
+@model IEnumerable<PartyHome.Models.Evento>
+
+<h2 class="mr-5" style="font-size:500%;color:#ffd600">Todos os Eventos</h2>
+<a href="/Evento/Cadastrar" class="bte bte-success" style="font-size:30px;border:2px solid Black;background-color:#ffd600;color: Black ">-Novo Evento-</a>
+    <style>
+         body {background-color: #9c9c9c;}
+    </style>
+@foreach(var evento in Model){
+    <div class="row">
+
+   
+    <div>
+    <p><b><h4><a class="mr-2" style="font-size:30px;color:#ffd600">Evento: </a>@evento.Event</h4></b></p>
+    <p><b><h4><a class="mr-2" style="font-size:30px;color:#ffd600">Capacidade de pessoas: </a> @evento.Capacidade</h4></b></p>
+    <p><b><h4><a class="mr-2" style="font-size:30px;color:#ffd600">Quantidade de Ingressos: </a>@evento.QtdIngressos</h4></b></p>
+    <p><b><h4><a class="mr-2" style="font-size:30px;color:#ffd600">Data do evento: </a>@evento.Data</h4></b></p>
+    <p><b><h4><a class="mr-2" style="font-size:30px;color:#ffd600">Valor de Ingresso: </a> @evento.Custo R$</h4></b></p>
+    <p><b><h4><a class="mr-2" style="font-size:30px;color:#ffd600">Local do evento: </a>@evento.Local</h4></b></p>
+    <p><b><h4><a class="mr-2" style="font-size:30px;color:#ffd600">Genero Musical: </a>@evento.Genero</h4></b></p>
+
+    <a href="/Evento/Editar/@evento.Id" class="bte bte-success" style="font-size:30px;border:2px solid Black;background-color:#0000b6;color: White ">-Editar-</a>
+    <a href="/Evento/Deletar/@evento.Id" class="bte bte-danger" style="font-size:30px;border:2px solid Black;background-color:#c90000;color: White ">-Apagar-</a>
+    <hr>
+        </div> 
+         <div>
+        @if(evento.Genero == "Eletronica"){
+        <h3 class="ml-5"><img width="500" src="~/Gifs/c21459fe0b0855e300259962751db278.gif"></h3>}
+         @if(evento.Genero == "Sertanejo"){
+        <h3 class="ml-5"><img width="350" src="~/Gifs/Animation1.gif"></h3>}
+         @if(evento.Genero == "Rock"){
+        <h3 class="ml-5"><img width="300" src="~/Gifs/giphyMH9C8FA4.gif"></h3>}
+         @if(evento.Genero == "Pop"){
+        <h3 class="ml-5"><img width="350" src="~/Gifs/tumblr_l1w8lsZ2Vx1qz5dp3o1_400.gif"></h3>}
+        </div>
+        </div>
+}
